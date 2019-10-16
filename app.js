@@ -119,27 +119,27 @@ function serviceFailure(errorCode)
 }
 
 app.sendData = function(data)
-{
-    if (app.connected && app.device != null)
-    {
-        data = new Uint8Array(data);
-        app.device.writeCharacteristic(
-            app.CHARACTERISTIC_UUID,
-            data,
-            function ()
-            {
-                console.log('Succeed to send message!' + data);
-            },
-            function (errorCode)
-            {
-                console.log('Failed to send message!' + errorCode);
-            }
-        );
-    }
-    else
-    {
-        app.disconnect('Device was disconnected when trying to send message');
-    }
+{//comment out for demo purpose
+    // if (app.connected && app.device != null)
+    // {
+    //     data = new Uint8Array(data);
+    //     app.device.writeCharacteristic(
+    //         app.CHARACTERISTIC_UUID,
+    //         data,
+    //         function ()
+    //         {
+    //             console.log('Succeed to send message!' + data);
+    //         },
+    //         function (errorCode)
+    //         {
+    //             console.log('Failed to send message!' + errorCode);
+    //         }
+    //     );
+    // }
+    // else
+    // {
+    //     app.disconnect('Device was disconnected when trying to send message');
+    // }
 }
 
 app.receivedData = function(data)
