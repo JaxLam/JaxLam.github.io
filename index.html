@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>jax.github</title>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>PYXLD Arm App</title>
+
+	<style>
+		@import 'ui/css/style.css';
+	</style>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>	
+
 </head>
-<body>
-<center><br>Welcome to my website!
-<br>Will update more in the future.
-<br>Thank you for visting!
-<br>contact: <a href="mailto: jaxlin@ucla.edu">jaxlin@ucla.edu</a></center>
+
+<body onload="app.initialize()">
+	<header id="theHeader">
+		<button class="back" onclick="history.back()">
+			<img src="res/left.png" />
+		</button>
+		PYXLD
+		<img class="logotype" src="ui/images/logo.png" alt="Evothings" />
+	</header> 
+
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="cordova.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="libs/evothings/ui/ui.js"></script>
+	<script src="libs/evothings/easyble/easyble.js"></script>
+	<script src="app.js"></script>
+
+	<!-- START VIEW -->
+	<div id="startView" style="margin-top: 10px">
+		<img class="center" src="./ui/images/main-img.jpg" id='main-img'>
+		<button id="myButton" class="green wide" onclick="app.initialize()">Reset</button>
+		<button id="myButton" class="yellow wide" onclick="app.connect()">connect</button>
+	</div>
+
+	<!-- CONTROL PANEL -->
+	<!-- class='wrapper' style='display: none' -->
+	<div id='controlsView'>
+		<button id="disconnectButton" class="red wide" 
+		onclick="app.disconnect('Disconnect')">disconnect</button>
+		<button type="text" id="timerBox" onclick="setTimer()">00:00</button>
+
+		<button id="counterclockwiseCtrl" class="blue controller" 
+		ontouchstart="app.sendData([0x00])" ontouchend="app.sendData([0x00])">⟳</button>
+		<button id="clockwiseCtrl" class="blue controller" 
+		ontouchstart="app.sendData([0x01])" ontouchend="app.sendData([0x01])">⟲</button>
+		<button id="extendCtrl" class="blue controller" 
+		ontouchstart="app.sendData([0x02])" ontouchend="app.sendData([0x02])">⥅</button>
+		<button id="abstractCtrl" class="blue controller"
+		ontouchstart="app.sendData([0x03])" ontouchend="app.sendData([0x03])">⥆</button>
+		<button id="upCtrl" class="blue controller" 
+		ontouchstart="app.sendData([0x04])" ontouchend="app.sendData([0x04])">⇉</button>
+		<button id="downCtrl" class="blue controller" 
+		ontouchstart="app.sendData([0x05])" ontouchend="app.sendData([0x05])">⇇</button>
+		<button id="catchCtrl" class="blue controller" 
+		ontouchstart="app.sendData([0x06])" ontouchend="app.sendData([0x06])">open</button>
+		<button id="releaseCtrl" class="blue controller"
+		ontouchstart="app.sendData([0x07])" ontouchend="app.sendData([0x07])">close</button>
+
+		<button id="resetButton" class="green wide" 
+		onclick="app.sendData([0x08])">reset</button>
+	</div>
+
 </body>
+
 </html>
+ 
