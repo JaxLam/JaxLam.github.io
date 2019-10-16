@@ -38,9 +38,15 @@ app.initialize = function() {
 
 app.connect = function()
 {
-    console.log('Attempting to connect to bluetooth module');
+    //Comment out for demo purpose
+    // console.log('Attempting to connect to bluetooth module');
 
-    evothings.easyble.startScan(scanSuccess,scanFailure, {serviceUUIDS : [app.SERVICE_UUID]}, { allowDuplicates: false});
+    // evothings.easyble.startScan(scanSuccess,scanFailure, {serviceUUIDS : [app.SERVICE_UUID]}, { allowDuplicates: false});
+
+
+
+    //add showControls for demo purpose
+    app.showControls();
 }
 
 function scanSuccess(device)
@@ -78,15 +84,16 @@ function connectFailure()
 
 app.disconnect = function(errorMessage)
 {
-    if(errorMessage)
-    {
-        console.log(errorMessage);
-    }
-    app.connected = false;
-    app.device = null;
+    //Comment out for demo purpose
+    // if(errorMessage)
+    // {
+    //     console.log(errorMessage);
+    // }
+    // app.connected = false;
+    // app.device = null;
 
-    evothings.easyble.stopScan();
-    evothings.easyble.closeConnectedDevices();
+    // evothings.easyble.stopScan();
+    // evothings.easyble.closeConnectedDevices();
     app.showStart();
 }
 
