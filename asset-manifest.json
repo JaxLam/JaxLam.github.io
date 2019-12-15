@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/jaxlin12.github.io/static/css/main.d1b05096.chunk.css",
+    "main.js": "/jaxlin12.github.io/static/js/main.9539eba0.chunk.js",
+    "main.js.map": "/jaxlin12.github.io/static/js/main.9539eba0.chunk.js.map",
+    "runtime-main.js": "/jaxlin12.github.io/static/js/runtime-main.499edbb4.js",
+    "runtime-main.js.map": "/jaxlin12.github.io/static/js/runtime-main.499edbb4.js.map",
+    "static/js/2.497a43ea.chunk.js": "/jaxlin12.github.io/static/js/2.497a43ea.chunk.js",
+    "static/js/2.497a43ea.chunk.js.map": "/jaxlin12.github.io/static/js/2.497a43ea.chunk.js.map",
+    "index.html": "/jaxlin12.github.io/index.html",
+    "precache-manifest.d50e8645f24f9280b5cfd8cde2482dad.js": "/jaxlin12.github.io/precache-manifest.d50e8645f24f9280b5cfd8cde2482dad.js",
+    "service-worker.js": "/jaxlin12.github.io/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/jaxlin12.github.io/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.497a43ea.chunk.js.LICENSE": "/jaxlin12.github.io/static/js/2.497a43ea.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.499edbb4.js",
+    "static/js/2.497a43ea.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.9539eba0.chunk.js"
+  ]
+}
